@@ -1,10 +1,10 @@
 import { resolve } from 'path';
-import { chdir } from 'process';
+import { rm } from 'node:fs/promises';
 import { logCurrentPath } from '../utils/index.js';
 
-export function cd(path) {
+export async function remove(fileName) {
   try {
-    chdir(resolve(path));
+    await rm(resolve(fileName));
   } catch {
     console.log('Operation failed');
   } finally {
