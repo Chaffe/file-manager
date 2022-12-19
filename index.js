@@ -1,6 +1,6 @@
 import process from 'process';
 import { homedir } from 'os';
-import { createInterface } from 'readline';
+import { createInterface } from 'node:readline/promises';
 import { greeting, logCurrentPath, exit, getInputConvert } from './utils/index.js';
 import { up, cd, ls, cat, add, rn, cp, mv, remove, os, hash, compress, decompress } from './operators/index.js'
 

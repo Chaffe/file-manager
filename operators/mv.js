@@ -1,4 +1,4 @@
-import { resolve, parse } from 'path';
+import { resolve } from 'path';
 import { createReadStream, createWriteStream } from 'node:fs';
 import { rm } from 'fs/promises';
 import { pipeline } from 'stream/promises';
