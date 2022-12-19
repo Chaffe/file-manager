@@ -24,9 +24,13 @@ export function os(arg) {
       logCurrentPath();
       break;
 
-      case '--architecture':
-        console.log(arch());
-        logCurrentPath();
-        break;
+    case '--architecture':
+      console.log(arch());
+      logCurrentPath();
+      break;
+
+    default:
+      console.log('Invalid input');
+      break;
   }
 }
