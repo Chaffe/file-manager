@@ -1,7 +1,7 @@
 import { homedir } from 'os';
 import { createInterface } from 'readline';
 import { greeting, logCurrentPath, exit, getInputConvert } from './utils/index.js';
-import { up, cd, ls, cat, add, rn, cp, mv, remove } from './operators/index.js'
+import { up, cd, ls, cat, add, rn, cp, mv, remove, os, hash, compress, decompress } from './operators/index.js'
 
 greeting();
 
@@ -63,7 +63,31 @@ readline.on('line', (input) => {
 
     case 'rm':
       if(inputConvert.length === 2) {
-        remove(inputConvert[1], inputConvert[2]);
+        remove(inputConvert[1]);
+        break;
+      }
+
+    case 'os':
+      if(inputConvert.length === 2) {
+        os(inputConvert[1]);
+        break;
+      }
+
+    case 'hash':
+      if(inputConvert.length === 2) {
+        hash(inputConvert[1]);
+        break;
+      }
+
+    case 'compress':
+      if(inputConvert.length === 3) {
+        compress(inputConvert[1], inputConvert[2]);
+        break;
+      }
+
+    case 'decompress':
+      if(inputConvert.length === 3) {
+        decompress(inputConvert[1], inputConvert[2]);
         break;
       }
 
