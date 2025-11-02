@@ -2,7 +2,12 @@ import process from 'process';
 import { homedir } from 'os';
 import { createInterface } from 'node:readline/promises';
 import { greeting, logCurrentPath, exit, getInputConvert } from './utils/index.js';
-import { os } from './operators/index.js';
+import {
+  ls,
+  cd,
+  up,
+  os
+} from './operators/index.js';
 
 greeting();
 
@@ -12,7 +17,6 @@ logCurrentPath();
 const readline = createInterface(process.stdin, process.stdout);
 readline.on('line', (input) => {
   const inputConvert = getInputConvert(input);
-  // console.log('input', input, inputConvert);
 
   switch (inputConvert[0]) {
     case 'up':
