@@ -13,6 +13,9 @@ import {
   rm,
   rn,
   mkdir,
+  hash,
+  compress,
+  decompress,
   os
 } from './operators/index.js';
 

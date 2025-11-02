@@ -12,5 +12,12 @@ export { rm } from './basic-operations/rm.js';
 export { rn } from './basic-operations/rn.js';
 export { mkdir } from './basic-operations/mkdir.js';
 
+// Hash
+export { hash } from './hash/hash.js';
+
+// Compress
+export { compress } from './compress/compress.js';
+export { decompress } from './compress/decompress.js';
+
 // OS
 export { os } from './os/os.js';
