@@ -6,6 +6,13 @@ import {
   ls,
   cd,
   up,
+  add,
+  cat,
+  cp,
+  mv,
+  rm,
+  rn,
+  mkdir,
   os
 } from './operators/index.js';
 
@@ -69,7 +76,13 @@ readline.on('line', (input) => {
 
     case 'rm':
       if (inputConvert.length === 2) {
-        remove(inputConvert[1]);
+        rm(inputConvert[1]);
+      }
+      break;
+
+    case 'mkdir':
+      if (inputConvert.length === 2) {
+        mkdir(inputConvert[1]);
       }
       break;
 
